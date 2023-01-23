@@ -23,14 +23,18 @@ body{
 }
 
 
-.cursor {
-    position:fixed;
-    width: 40px;
-    height: 40px;
-    border-radius:50%;
-    border: 2px solid #000;
-    left : 0;
-}
+.cursor{
+    width: 45px;
+    height: 45px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    /*center to cursor */
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  
+
 h1,h2,p,.valider {
     color:#fff;
     font-family: 'Cormorant Garamond', serif;
