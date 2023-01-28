@@ -2,18 +2,21 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Titre de la page</title>
+  <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Inter:wght@100&family=Playfair+Display:wght@500&family=Unbounded&display=swap" rel="stylesheet">
+<meta name="description" content="portfolio">
 </head>
 <body>
+	<div class= "screen">
         <div class="about">
             <h1>Qui suis-je ?</h1>
             <h2>Étudiant à l’université Paris Nanterre en MIASHS</h2>
             <p>Depuis tout petit je suis passionnée par l’informatique c’est pour cela que j’ai choisi de faire ses études et je souhaite aujourd’hui trouver un stage en alternance afin de continuer cette quête de connaissance dans ce domaine</p>
         </div>
+		<div class="right">
         <div class="Tech">
             <h1>Technologies maitrisées</h1>
             <div class="images"> 
@@ -27,8 +30,16 @@
         </div>
         <h1 class="txt">Projets</h1>
         <div class="Projets">
-            <div style="background-image: url('images/recharge.jpg')"></div>
+            <div style="background-image: url('images/recharge.jpg')">
+               <div class="description">
+                  <p>Ce projet consiter à ameliorer une base de données SQL </p>
+               </div>
+            </div>
             <div style="background-image: url('images/ruches.jpg')"></div>
+            <div class="description">
+               <p>Ce projet a consister a cree une interface web en php pour un </p>
+            </div>
+            
             <div style="background-image: url('images/flasck.png')"></div>
             <div style="background-image: url('images/stegano.png')"></div>
         </div>
@@ -39,7 +50,9 @@
                 <input type="submit" class="valider" value="Valider">
             </form>
         </div>
+		</div>
     </div>
+</div>
     <div class="cursor"></div>
 </body>
 </html>
