@@ -4,11 +4,10 @@ body{
     margin-right:10%;
     margin-left:10%;
     overflow-x: hidden;
-	overflow-y:hidden;
+    overflow-y: hidden;
     background: linear-gradient(-45deg, #1A2027, rgb(23, 28, 90), #6d7ca3, #778098);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-	cursor:none;
 
 }
 
@@ -24,6 +23,12 @@ body{
 	}
 }
 
+.gride{
+    display: grid;
+    width:100vh;
+    height:100vh;
+}
+
 
 .cursor{
     width: 45px;
@@ -35,18 +40,7 @@ body{
     transform: translate(-50%, -50%);
     pointer-events: none;
   }
- 
- .cursor::after {
-   content: "";
-   width: 40px;
-   height: 40px;
-   border: 15px solid rgba(var(--white-rbg-color), .2);
-   border-radius: 50%;
-   position: absolute;
-   top: -25px;
-   left: -25px;
-   animation: cursor-animate-2 550ms infinite alternate;
-}
+  
 
 h1,h2,p,.valider {
     color:#fff;
@@ -56,29 +50,15 @@ h1,h2,p,.valider {
     font-family: 'Unbounded', cursive;
 }
 
-.screen{
-	display:grid;
-	grid-template-rows:25% 75%;
-	justify-items:center;
-	grid-template-areas:
-		"about right"
-		
-}
-
 /*Qui suis-je ?*/
-
-.about{
-	grid-area: about;
-}
 
 .about h1{
     font-size: 2rem;
     text-decoration: underline;
-    width:80%;
+    width:100vh;
 }
 
 .about h2{
-	right:0;
     font-size: 1.5rem;
     margin-left: 1rem;
     margin-top: 4em;
@@ -89,9 +69,6 @@ h1,h2,p,.valider {
     margin-left: 3rem;
 }
 
-.right{
-	width:80%;
-}
 /*Technologies maitrisées*/
 
 .Tech h1{
@@ -138,22 +115,11 @@ h1,h2,p,.valider {
 .Projets > div:hover {
     flex: 5;
 }
-.Projets > div:hover .cursor {
-    width: 45px;
-    height: 45px;
-    border: 2px solid #00000;
-    border-radius: 50%;
-    position: absolute;
-    /*center to cursor */
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
 
 /*Contact*/
 
 .Contact{
     position: relative;
-	opacity:0;
 
 }
 
