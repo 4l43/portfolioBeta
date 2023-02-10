@@ -8,3 +8,12 @@ document.addEventListener('mousemove', e => {
   cursorRounded.style.top = mouseY + "px"; 
   cursorRounded.style.left = mouseX + "px";   
 })
+
+const texts = document.querySelectorAll('.banner-text');
+
+texts.forEach((text, index) => {
+  setTimeout(() => {
+    text.style.animation = `slide-in 1s forwards ${index * 0.5}s`;
+  }, 0);
+});
+
