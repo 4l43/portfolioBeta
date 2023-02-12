@@ -1,8 +1,9 @@
-var card = document.querySelector('.about');
+const cursorRounded = document.querySelector('.cursor');
 
-document.addEventListener("mousemove", e => {
-    let mouseX  = (window.innerWidth / 2 - e.pageX) / 20;
-    let mouseY = (window.innerHeight / 2 - e.pageY) / 15;
-    
-    card.style.transform = `rotateY(${mouseX}deg) rotateX(${mouseY}deg)`;
-  });
+document.addEventListener('mousemove', e => {
+  const mouseX = e.pageX;
+  const mouseY = e.pageY;   
+  
+  cursorRounded.style.top = mouseY + "px"; 
+  cursorRounded.style.left = mouseX + "px";   
+})
