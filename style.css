@@ -1,104 +1,94 @@
-body {
-  background-color:#1E2F48;
-    margin-top:3%;
-    margin-left:15%;
-    margin-right:15%;
-  }
+body{
+    background-color: #27415A;
+    padding:5%;
 
-/*Qui suis-je ?*/
-
-.banner{
-
-  color:#F3F0E2;
-  height:100vh;
-  display: grid;
-  grid-template-columns:40% 70%;
-  grid-template-rows: 20% 20% 20%;
-  column-gap:20%;
-  grid-template-areas:
-    "text1 ."
-    ". text2"
-    "text3 ."
-}
-  
-.text1 {
-  grid-area: text1;
-    margin-top:10%;
-    font-size:5vh;
-    animation: slide-in-1 1s forwards;
-    left: -100%;
-}
-  
-.text2 {
-  grid-area: text2;
-  position: relative;
-  right: 0;
-  width: 50%;
-  font-size:3.4vh;
-  animation: slide-in-2 1s forwards;
 }
 
-.text3 {
-  grid-area: text3;
-  font-size:2.5vh;
-  animation: slide-in-1 1s forwards;
-  left: 100%;
+.screen{
+    max-height:100vh;
+    display: grid;
+    grid-template-columns: 33% 67%;
+    grid-template-rows: 50% 50%;
+    column-gap:10%;
+    grid-template-areas: 
+    "about tech"
+    "about projets";
 }
-  
-
-@keyframes slide-in-1 {
-    0% {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-@keyframes slide-in-2 {
-    0% {
-      transform: translateX(100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
- 
-/*Projets*/
-
-.projet {
-  position: relative;
-  margin-top:5%;
-  width: 80vw;
+/*about me*/
+.about {
+    background-color:#D9D9D9;
+    height:80vh;
+    box-shadow: -11px -8px 0px 1px #54748B;
+    grid-area: about;
 }
 
-.projet .p1{
-  background-color:#F3F0E2 ;
-  position: relative;
-  width: 100%;
-  display: grid;
-  grid-template-columns:80% 20%;
-  grid-template-rows:auto;
-  grid-template-areas:
-    "h1 h2"
+.about h1 {
+    font-size: 5vh;
+    color: #27415A;
+}
+.about h2{
+    font-size: 4vh;
+    color: #27415A;
 }
 
-.p1 h1{
-  grid-area:h1;
-  font-size:2.5vh;
-  width: 50%;
+.about p{
+    font-size:3vh;
+    color: #27415A;
 }
 
-.p1 h2{
-  grid-area: h2;
-  font-size:2.5vh;
+/*technologies*/
+.tech{
+    grid-area:tech;
+    height:100%;
+}
+.tech h1{
+    font-size: 5vh;
+    text-align: center;
+    text-decoration: underline;
+    color:#D9D9D9;
+}
+
+.tech .images{
+    display: flex;
+    justify-content:center;
+    gap: 1rem;
+}
+.tech > div >img {
+    filter: invert();
+    height: 100%;
 }
 
 
+/*projets*/
 
-/*
-*/
+.projets{
+    grid-area: projets;
+    height:30vh;
+    width:95%;
+}
+
+.projets h1{
+    color:#D9D9D9;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.projets .images{
+    display: flex;
+    height:100%;
+    gap: 1rem;
+}
+
+
+.projets .images > div {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all .8s cubic-bezier(.25, .4 , .45, 1.4);
+}
+
+.projets .images > div:hover {
+    flex: 5;
+}
